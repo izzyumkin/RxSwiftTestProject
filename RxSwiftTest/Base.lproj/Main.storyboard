@@ -16,19 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ql2-uI-aGK">
-                                <rect key="frame" x="186" y="438" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JWJ-DF-DWo">
+                                <rect key="frame" x="16" y="438" width="382" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ql2-uI-aGK">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ql2-uI-aGK" firstAttribute="leading" secondItem="JWJ-DF-DWo" secondAttribute="leading" id="FbO-Sg-PA0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ql2-uI-aGK" secondAttribute="trailing" id="dFw-0J-Nry"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JWJ-DF-DWo" secondAttribute="trailing" constant="16" id="e8t-kC-Opj"/>
+                            <constraint firstItem="JWJ-DF-DWo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f20-Cl-loc"/>
+                            <constraint firstItem="JWJ-DF-DWo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="o7M-Up-HLA"/>
+                            <constraint firstItem="JWJ-DF-DWo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w7w-b1-7nS"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="nameLabel" destination="Ql2-uI-aGK" id="Ipk-Jd-mPY"/>
+                        <outlet property="firstMessageLabel" destination="Ql2-uI-aGK" id="Ipk-Jd-mPY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
